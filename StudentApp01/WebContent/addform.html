@@ -1,0 +1,68 @@
+<html>
+<head>
+<script type="text/javascript">
+function sum(){
+	var s1 = document.getElementById("s1").value;
+	var s2 = document.getElementById("s2").value;
+	var s3 = document.getElementById("s3").value;
+	var s4 = document.getElementById("s4").value;
+	var s5 = document.getElementById("s5").value;
+	var s6 = document.getElementById("s6").value;
+	
+	var result = parseInt(s1) + parseInt(s2) + parseInt(s3) + parseInt(s4) + parseInt(s5) + parseInt(s6);
+	if(!isNaN(result)){
+		document.getElementById("total").value = result;
+	}
+}
+</script>
+</head>
+<body>
+<form  method="POST" action="add.do">
+<table align="center">
+<tr>
+	<td>SID:</td>
+	<td><input type="text" name="sid" /></td>
+</tr>
+<tr>
+	<td>SNAME:</td>
+	<td><input type="text" name="sname" /></td>
+</tr>
+<tr>
+	<td>CLASS:</td>
+	<td><input type="text" name="cls" /></td>
+</tr>
+<tr>
+	<td>S1:</td>
+	<td><input type="text" name="s1" id="s1" onkeyup="sum()"/></td>
+</tr>
+<tr>
+	<td>S2:</td>
+	<td><input type="text" name="s2" id="s2" onkeyup="sum()" /></td>
+</tr>
+<tr>
+	<td>S3:</td>
+	<td><input type="text" name="s3" id="s3" onkeyup="sum()" /></td>
+</tr>
+<tr>
+	<td>S4:</td>
+	<td><input type="text" name="s4" id="s4" onkeyup="sum()" /></td>
+</tr>
+<tr>
+	<td>S5:</td>
+	<td><input type="text" name="s5" id="s5" onkeyup="sum()" /></td>
+</tr>
+<tr>
+	<td>S6:</td>
+	<td><input type="text" name="s6" id="s6" onkeyup="sum()" /></td>
+</tr>
+<tr>
+	<td>TOTAL:</td>
+	<td><input type="text" name ="total" id="total" onkeyup="gpa()"/></td>
+</tr>
+<tr>
+	<td><input type="submit" value="ADD"/></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
